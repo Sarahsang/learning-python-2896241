@@ -29,9 +29,9 @@ def main():
             result = 1
         case "two":
             result = 2
-        case "three" | "four":
-            result = (3, 4)
-        case _:
+        case "three" | "four":  # | is the "or" operator
+            result = (3, 4) 
+        case _:                 # _ is the "default" case
             result = -1
     print(result)
 

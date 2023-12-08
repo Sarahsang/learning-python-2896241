@@ -20,7 +20,7 @@ class MyHTMLParser(HTMLParser):
 
         print ("Encountered a start tag:", tag)
         pos = self.getpos() # returns a tuple indication line and character
-        print ("\tAt line: ", pos[0], " position ", pos[1])
+        print ("\tAt line: ", pos[0], " position ", pos[1]) #\t是tab键，用来缩进
 
         if attrs.__len__() > 0:
             print ("\tAttributes:")
@@ -32,7 +32,7 @@ class MyHTMLParser(HTMLParser):
         if (data.isspace()):
             return
         print ("Encountered some text data:", data)
-        pos = self.getpos()
+        pos = self.getpos() #getpos()返回的是一个元组，第一个元素是行数，第二个元素是字符数
         print ("\tAt line: ", pos[0], " position ", pos[1])
     
     # function to handle the processing of HTML comments
@@ -47,7 +47,7 @@ def main():
       
     # open the sample HTML file and read it
     f = open("samplehtml.html")
-    if f.mode == "r":
+    if f.mode == "r": #r是read
         contents = f.read() # read the entire file
         parser.feed(contents)
     

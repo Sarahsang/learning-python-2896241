@@ -38,6 +38,6 @@ if afd < today:
     afd = afd.replace(year=today.year + 1)  # if so, get the date for next year
 
 # Now calculate the amount of time until April Fool's Day  
-time_to_afd = afd - today
+time_to_afd = afd - today # timedelta object 时间间隔就是timedelta属性，可以直接用timedelta.days来获取天数
 print ("It's just", time_to_afd.days, "days until next April Fools' Day!")
 

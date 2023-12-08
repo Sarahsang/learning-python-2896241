@@ -13,12 +13,12 @@ def main():
     
     #### Date Formatting ####
     
-    # %y/%Y - Year, %a/%A - weekday, %b/%B - month, %d - day of month
+    # %y/%Y - Year（23/2023）, %a/%A - weekday, %b/%B - month, %d - day of month 大小写区分缩略还是完整如：Mon/Monday
     print (now.strftime("The current year is: %Y")) # full year with century
     print (now.strftime("%a, %d %B, %y")) # abbreviated day, num, full month, abbreviated year
     
     # %c - locale's date and time, %x - locale's date, %X - locale's time
-    print (now.strftime("Locale date and time: %c"))
+    print (now.strftime("Locale date and time: %c")) # locale's date and time 默认使用计算机的date and time
     print (now.strftime("Locale date: %x"))
     print (now.strftime("Locale time: %X"))
     

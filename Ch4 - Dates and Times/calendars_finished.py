@@ -5,10 +5,10 @@
 
 
 import calendar
-
+#monthcalendar是一个函数，返回一个二维数组，第一维是星期，第二维是日期
 # create a plain text calendar
-c = calendar.TextCalendar(calendar.SUNDAY)
-str = c.formatmonth(2022, 1, 0, 0)
+c = calendar.TextCalendar(calendar.SUNDAY) # 星期天是第一天 textcalendar是一个类，所以要用TextCalendar
+str = c.formatmonth(2022, 1, 0, 0) #formatmonth让你可以选择从哪一天开始，0，0就是从第一天开始
 print (str)
 
 # create an HTML formatted calendar
